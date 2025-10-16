@@ -2,7 +2,14 @@
 // e.g., integrate it into a service or component
 // You may need to tweak it, depending on where and how you use it
 
-function calculateInvestmentResults() {
+export function calculateInvestmentResults(data: {
+  initialInvestment: number;
+  annualInvestment: number;
+  expectedReturn: number;
+  duration: number;
+}) {
+  const { initialInvestment, annualInvestment, expectedReturn, duration } =
+    data;
   const annualData = [];
   let investmentValue = initialInvestment;
 
